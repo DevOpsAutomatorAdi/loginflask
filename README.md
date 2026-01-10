@@ -57,10 +57,13 @@ Before you begin, make sure you have the following installed:
    - Use a MySQL client or tool (e.g., phpMyAdmin) to execute the following SQL commands:
    
      ```sql
-     CREATE TABLE messages (
-         id INT AUTO_INCREMENT PRIMARY KEY,
-         message TEXT
-     );
+     CREATE TABLE accounts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL
+);
+
      ```
 
 4. Interact with the app:
